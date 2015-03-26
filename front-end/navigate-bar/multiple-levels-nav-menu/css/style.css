@@ -1,0 +1,233 @@
+﻿body{
+    margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, "Microsoft Yahei","微?雅黑", STXihei, "?文?黑", sans-serif;
+	font-size: 14px;
+	color: white;
+}
+
+.box { float: left; }
+#root { 
+	max-width: 100%; 
+	margin: 0 auto; 
+}
+
+#header { 
+	width: 100%; 
+	background-color: #111111;
+}
+
+#nav-bar { 
+	width: 100%;
+	background-color: #D6001C; 
+}
+
+/****** Base style *******/
+/* To get started, all of the lists need to be jigged around 
+ * a bit — namely, the padding and margin set to zero and the
+ * list-style set to none 
+ */
+#nav, #nav ul
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* Transform the list into a horizontal menu bar.The position 
+ * has been set to relative because we want the position of 
+ * the second-level, nested lists to be relative to the 
+ * first-level list items
+ */
+#nav li
+{
+	float: left;
+	position: relative;
+	line-height: 3.5em;
+	width: 14em;
+}
+
+/* This positions the second-level lists absolutely (pulling
+ * them out of the flow of HTML into a world all of their own)
+ * and sets their initial state to not be displayed .
+ */
+#nav li ul
+{
+	position: absolute;
+	margin-top: 0em;
+	margin-left: 0em;
+	display: none;
+}
+
+/* We could position the second level navigation with top and
+ * left, and this will work just fine in Firefox.Because of 
+ * IE and its problem of calculating the correct z-index position,
+ * we will use the margin-top and margin-left instead.
+ */
+#nav ul li ul
+{
+	margin-top: -3em;
+	margin-left: 7em;
+}
+
+/* Position the third-level navigation */
+#nav li ul li ul
+{
+    position: absolute;
+    margin-top: -3.5em;
+	margin-left: 14em;
+	display: none;
+}
+/****** link style *******/
+#nav a
+{
+	display: block;
+	text-decoration: none;
+	color: white;
+	border-right: 1px solid;
+}
+
+/* top nav hover color and lin color */
+#nav li a:hover
+{
+	background-color: #b5091f;
+	color: white;
+}
+
+/* sub nav hover color and link color */
+#nav li ul a:hover
+{
+    background-color: #343434;
+	color: white;
+}
+
+/* list background color */
+#nav ul a
+{
+    border-right: none;
+    background-color: #111111;
+}
+
+/* show sub-nav 1 */
+#nav li:hover ul, #nav li.over ul
+{
+    display: block;
+}
+
+/* The second level isn’t visible by default, because we hided it 
+ * with display:none;. Now, we want to display a second level, but
+ * not the third. If we simply add #menu li:hover ul { display:block; } 
+ * we would display both the second and the third level because 
+ * this is inherited. So, we will add #menu li:hover ul ul 
+ * { display:none; } to hide the third level.If you wish to add
+ * a fourth level of navigation, you can simply do that by adding
+ * one more UL to the CSS code.
+ */
+ /* hidden sub-nav 3 */
+#nav li:hover ul ul, #nav li.over ul ul
+{
+    display: none;
+}
+
+/* show sub-nav 2 */
+#nav li:hover ul, #nav ul li.over ul
+{
+    display: block;
+}
+
+/* 定义三维面上的层叠关系 */
+#nav 
+{
+    z-index: 1;
+}
+
+#nav ul
+{
+    z-index: 2;
+}
+
+#nav ul ul
+{
+    z-index: 3;
+}
+
+/* Media Queries
+
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+/* Laptop/Tablet (1024px) */
+@media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+	#header { width: 100%; }
+	#nav-bar { width: 100%; }
+}
+
+/* Tablet Portrait (768px) */
+@media only screen and (min-width: 321px) and (max-width: 1024px) and (orientation: portrait) {
+	#header { width: 100%; }
+	#nav-bar { width: 100%; }
+}
+
+/* Phone Landscape (480px) */
+@media only screen and (min-width: 321px) and (max-width: 480px) and (orientation: landscape) {
+	#header { width: 100%; }
+	#nav-bar { width: 100%; }
+}
+
+/* Phone Portrait (320px) */
+@media only screen and (max-width: 320px) {
+	#header { width: 100%; }
+	#nav-bar { width: 100%; }
+}
+
+/* iPad 3 & 4 Landscape */
+@media only screen and (width: 481px) and (width: 1024px) and (orientation: landscape) {
+	#header { width: 100%; }
+	#nav-bar { width: 100%; }
+}
+
+/* iPad 3 & 4 Portrait */
+@media only screen and (width: 481px) and (width: 1024px) and (orientation: portrait) {
+	#header { width: 100%; }
+	#nav-bar { width: 100%; }
+}
+
+/* iPhone 2G-3GS Landscape */
+@media only screen and (width: 481px) and (width: 480px) and (orientation: landscape) {
+	#header { width: 100%; }
+	#nav-bar { width: 100%; }
+}
+
+/* iPhone 2G-3Gs Portrait */
+@media only screen and (width: 481px) and (width: 480px) and (orientation: portrait) {
+	#header { width: 100%; }
+	#nav-bar { width: 100%; }
+}
+
+/* iPhone 4/4S Landscape */
+@media only screen and (width: 569px) and (width: 480px) and (orientation: landscape) {
+	#header { width: 100%; }
+	#nav-bar { width: 100%; }
+}
+
+/* iPhone 4/4S Portrait */
+@media only screen and (width: 569px) and (width: 480px) and (orientation: portrait) {
+	#header { width: 100%; }
+	#nav-bar { width: 100%; }
+}
+
+/* iPhone 5 Landscape */
+@media only screen and (width: px) and (width: 568px) and (orientation: landscape) {
+	#header { width: 100%; }
+	#nav-bar { width: 100%; }
+}
+
+/* iPhone 5 Portrait */
+@media only screen and (width: px) and (width: 568px) and (orientation: portrait) {
+	#header { width: 100%; }
+	#nav-bar { width: 100%; }
+}
+
