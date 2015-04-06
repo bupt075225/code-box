@@ -1,0 +1,140 @@
+*
+{
+    margin: 0;
+	padding: 0;
+}
+
+body
+{
+	font-family: Helvetica, Arial, "Microsoft Yahei","微?雅黑", STXihei, "?文?黑", sans-serif;
+	font-size: 14px;
+	color: #666;
+}
+
+.box 
+{ 
+    float: left; 
+}
+
+#root 
+{ 
+    max-width: 100%; 
+	margin: 0 auto; 
+}
+
+#header
+{
+    width: 100%;
+}
+
+/* navigate bar and list global reset */
+#nav,#nav ul
+{
+    list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+/* Position <li> tag, float change text flow to make <li> elements horizontal. 
+ * Set width and line height property for <li>*/
+#nav li
+{
+    float: left;
+	position: relative;
+	line-height: 40px;
+	width: 140px;
+	background-color: #5a8078;
+}
+
+/* Position the second level navigate menu. margin-top and margin-left make
+ * agile to top level navigate menu and hidden this level */
+#nav li ul
+{
+    position: absolute;
+	margin-top: 0;
+	margin-left: 0;
+	display: none;
+}
+
+/* Hyper link style */
+#nav li a
+{
+    display: block;
+	padding: 0 15px;
+	color: #fff;
+	text-decoration: none;
+}
+
+/* link hover color style */
+#nav li a:hover
+{
+    color: #a3f1d7;
+}
+
+/* Display the second level navigate menu when hover the first level */
+#nav li:hover ul
+{
+    display: block;
+}
+
+
+/* Laptop/Tablet (1024px) */
+@media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+	#header { width: 100%; }
+}
+
+/* Tablet Portrait (768px) */
+@media only screen and (min-width: 321px) and (max-width: 1024px) and (orientation: portrait) {
+	#header { width: 100%; }
+}
+
+/* Phone Landscape (480px) */
+@media only screen and (min-width: 321px) and (max-width: 480px) and (orientation: landscape) {
+	#header { width: 100%; }
+}
+
+/* Phone Portrait (320px) */
+@media only screen and (max-width: 320px) {
+	#header { width: 100%; }
+}
+
+/* iPad 3 & 4 Landscape */
+@media only screen and (width: 481px) and (width: 1024px) and (orientation: landscape) {
+	#header { width: 100%; }
+}
+
+/* iPad 3 & 4 Portrait */
+@media only screen and (width: 481px) and (width: 1024px) and (orientation: portrait) {
+	#header { width: 100%; }
+}
+
+/* iPhone 2G-3GS Landscape */
+@media only screen and (width: 481px) and (width: 480px) and (orientation: landscape) {
+	#header { width: 100%; }
+}
+
+/* iPhone 2G-3Gs Portrait */
+@media only screen and (width: 481px) and (width: 480px) and (orientation: portrait) {
+	#header { width: 100%; }
+}
+
+/* iPhone 4/4S Landscape */
+@media only screen and (width: 569px) and (width: 480px) and (orientation: landscape) {
+	#header { width: 100%; }
+}
+
+/* iPhone 4/4S Portrait */
+@media only screen and (width: 569px) and (width: 480px) and (orientation: portrait) {
+	#header { width: 100%; }
+}
+
+/* iPhone 5 Landscape */
+@media only screen and (width: px) and (width: 568px) and (orientation: landscape) {
+	#header { width: 100%; }
+}
+
+/* iPhone 5 Portrait */
+@media only screen and (width: px) and (width: 568px) and (orientation: portrait) {
+	#header { width: 100%; }
+}
+

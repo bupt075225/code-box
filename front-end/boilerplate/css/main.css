@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; }
+
+#contactForm {
+  margin: 20px auto; }
+
+legend {
+  color: #1eaedb; }
+
+fieldset.interestsGroup label {
+  display: inline;
+  float: left;
+  width: 33%; }
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 800px) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for viewports that meet the condition */
+}

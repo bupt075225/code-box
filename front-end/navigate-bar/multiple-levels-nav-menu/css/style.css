@@ -84,10 +84,10 @@
 	display: block;
 	text-decoration: none;
 	color: white;
-	border-right: 1px solid;
+	border-right: 1px solid #fff;
 }
 
-/* top nav hover color and lin color */
+/* top nav hover color and link color */
 #nav li a:hover
 {
 	background-color: #b5091f;
@@ -108,21 +108,21 @@
     background-color: #111111;
 }
 
-/* show sub-nav 1 */
-#nav li:hover ul, #nav li.over ul
-{
-    display: block;
-}
-
 /* The second level isn’t visible by default, because we hided it 
  * with display:none;. Now, we want to display a second level, but
- * not the third. If we simply add #menu li:hover ul { display:block; } 
+ * not the third. If we simply add #nav li:hover ul { display:block; } 
  * we would display both the second and the third level because 
- * this is inherited. So, we will add #menu li:hover ul ul 
+ * this is inherited. So, we will add #nav li:hover ul ul 
  * { display:none; } to hide the third level.If you wish to add
  * a fourth level of navigation, you can simply do that by adding
  * one more UL to the CSS code.
  */
+ /* show sub-nav 1 */
+#nav li:hover ul, #nav li.over ul 
+{
+	display:block;
+}
+
  /* hidden sub-nav 3 */
 #nav li:hover ul ul, #nav li.over ul ul
 {
@@ -130,7 +130,7 @@
 }
 
 /* show sub-nav 2 */
-#nav li:hover ul, #nav ul li.over ul
+#nav ul li:hover ul, #nav ul li.over ul
 {
     display: block;
 }

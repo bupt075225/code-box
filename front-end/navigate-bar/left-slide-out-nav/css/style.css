@@ -1,0 +1,155 @@
+body
+{
+    margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, "Microsoft Yahei","微?雅黑", STXihei, "?文?黑", sans-serif;
+	font-size: 14px;
+	color: white;
+}
+
+.box 
+{ 
+    float: left; 
+}
+
+#root 
+{ 
+    max-width: 1200px;
+	margin: 0 auto; 
+}
+
+#header
+ {
+    width: 100%;
+}
+
+/****** Base style *******/
+/* The navigation should always be accessible for the user, even if he
+ * scrolls down the page. So, the position should be fixed. Margin and
+ * padding are explicitly set to 0, since the unordered list has default
+ * values for them. The navigation should also be on top of all other 
+ * elements on the page. That’s why we set the z-index very high.
+ */
+#nav
+{
+    position: fixed;
+    margin: 0px;
+	padding: 0px;
+	top: 10px;
+	left: 0px;
+    list-style: none;
+	z-index: 9999;
+}
+
+/* Set the list element properties */
+#nav li
+{
+    width: 100px;
+}
+
+/****** links in the list element style *******/
+/* The margin-left is set to a negative value because we want to hide 
+ * most of the icon and only reveal it when we hover over the list 
+ * items. Basically, we are pushing the link element to the left, 
+ * outside of the visual area of the page 
+ */
+#nav li a
+{
+    display: block;
+	margin-left: -2px;
+	width: 100px;
+	height: 70px;
+	background-color: #cfcfcf;
+	background-repeat: no-repeat;
+	background-position: center center;
+	border: 1px solid #afafaf;
+	
+	opacity: 0.6;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60); /*make this work for Internet Explorer as well*/
+}
+
+#nav .home a
+{
+    background-image: url(../images/home-menu.png);
+}
+
+#nav .product a
+{
+    background-image: url(../images/product-menu.png);
+}
+
+#nav .about a
+{
+    background-image: url(../images/about-menu.png);
+}
+
+#nav .stockists a
+{
+    background-image: url(../images/product-menu.png);
+}
+
+#nav .blog a
+{
+    background-image: url(../images/about-menu.png);
+}
+
+#nav .contact a
+{
+    background-image: url(../images/contact-menu.png);
+}
+
+/* Laptop/Tablet (1024px) */
+@media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+	#header { width: 100%; }
+}
+
+/* Tablet Portrait (768px) */
+@media only screen and (min-width: 321px) and (max-width: 1024px) and (orientation: portrait) {
+	#header { width: 100%; }
+}
+
+/* Phone Landscape (480px) */
+@media only screen and (min-width: 321px) and (max-width: 480px) and (orientation: landscape) {
+	#header { width: 100%; }
+}
+
+/* Phone Portrait (320px) */
+@media only screen and (max-width: 320px) {
+	#header { width: 100%; }
+}
+
+/* iPad 3 & 4 Landscape */
+@media only screen and (width: 481px) and (width: 1024px) and (orientation: landscape) {
+	#header { width: 100%; }
+}
+
+/* iPhone 2G-3GS Landscape */
+@media only screen and (width: 481px) and (width: 480px) and (orientation: landscape) {
+	#header { width: 100%; }
+}
+
+/* iPhone 2G-3Gs Portrait */
+@media only screen and (width: 481px) and (width: 480px) and (orientation: portrait) {
+	#header { width: 100%; }
+}
+
+/* iPhone 4/4S Landscape */
+@media only screen and (width: 569px) and (width: 480px) and (orientation: landscape) {
+	#header { width: 100%; }
+}
+
+/* iPhone 4/4S Portrait */
+@media only screen and (width: 569px) and (width: 480px) and (orientation: portrait) {
+	#header { width: 100%; }
+}
+
+/* iPhone 5 Landscape */
+@media only screen and (width: px) and (width: 568px) and (orientation: landscape) {
+	#header { width: 100%; }
+}
+
+/* iPhone 5 Portrait */
+@media only screen and (width: px) and (width: 568px) and (orientation: portrait) {
+	#header { width: 100%; }
+}
+

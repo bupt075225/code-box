@@ -1,0 +1,68 @@
+*
+{
+    padding: 0px;
+	margin: 0px;
+}
+
+body
+{
+    font-family: Arial;
+	font-size: 62%;
+	padding: 20px;
+}
+
+#contactForm
+{
+    margin: 50px auto;
+	width: 500px;
+}
+
+fieldset
+{
+    padding: 20px;
+	border: none;
+}
+
+h3
+{
+    font-size: 1.5em;
+	padding: 0px;
+	color: #278dd1;
+	font-weight: normal;
+}
+
+label,textarea
+{
+    display: block;
+}
+
+label
+{
+    font-size: 1.1em;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+fieldset.interestsGroup label
+{
+    display: inline;
+	float: left;
+	width: 33%;
+}
+
+input,textarea
+{
+    margin-top: 5px;
+}
+
+.text
+{
+    width: 100%;
+	border: 1px solid #e5e5e5;
+	padding: 5px;
+}
+
+.button
+{
+    margin-left: 20px;
+}

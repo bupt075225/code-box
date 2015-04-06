@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="generator" content="Responsive Web Css (www.responsivewebcss.com)" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- CSS -->
+        <link rel="Stylesheet" href="./css/style.css" />
+		<link rel="Stylesheet" href="./css/normalize.css"/>
+		<!--[if IE]>
+		    #nav li.over ul
+			{
+			    display: block;
+			}
+			
+			#nav li ul li
+			{
+			    height: 30px;
+				line-height: 30px;
+			}
+		<![endif]-->
+		<!-- script -->
+		<!--[if lte IE 6]>
+		    <script type="text/javascript">
+			    startList = function()
+				{
+				    if(document.all && document.getElementById)
+					{
+					    var navRoot = document.getElementById("nav");
+						for(i=0; i<navRoot.childNodes.length; i++)
+						{
+						    var node = navRoot.childNodes[i];
+							if(node.nodeName == "LI")
+							{
+							    node.onmouseover=function()
+								{
+								    this.className+="over";
+								}
+								node.onmouseout=function()
+								{
+								    this.className=this.className.replace("over","");
+								}
+							}
+						}
+					}
+				}
+				window.onload=startList;
+			</script>
+		<![endif]-->
+    </head>
+    <body>
+        <div id='root'>
+            <div class='box' id='header'>
+			    <ul id="nav">
+				    <li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Products</a>
+					    <ul>
+						    <li><a href="#">Widgets</a></li>
+							<li><a href="#">Thingamabobs</a></li>
+							<li><a href="#">Doohickies</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+        </div>
+    </body>
+</html>

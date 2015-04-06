@@ -1,0 +1,53 @@
+*
+{
+    padding: 0px;
+	margin: 0px;
+}
+
+body
+{
+    font-family: Arial;
+	font-size: 62%;
+	padding: 20px;
+}
+
+#contactForm
+{
+    margin: 50px auto;
+	width: 500px;
+}
+
+fieldset
+{
+    padding: 20px;
+	border: none;
+}
+
+legend
+{
+    font-size: 2em;
+	padding: 0px;
+	font-weight: bold;
+}
+
+label,input,textarea
+{
+    display: block;
+}
+
+label
+{
+    font-size: 1.1em;
+}
+
+input,textarea
+{
+    margin-top: 5px;
+}
+
+.text
+{
+    width: 100%;
+	border: 1px solid #e5e5e5;
+	padding: 5px;
+}

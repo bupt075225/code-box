@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+        
+	<!-- Mobile Specific metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta http-equiv="cleartype" content="on">
+
+	<!-- FONT 
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+	-->
+	
+	<!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/main.css">
+		
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	
+</head>
+<body>
+  <!-- Add your site or application content here -->
+  <div class="container">
+    <h5>Basic Page</h5>
+	<!-- Form -->
+    <div id="contactForm">
+      <form method="post" action="#">
+	    <fieldset>
+	      <legend>Sign in</legend>
+		  <label>Username or Email<br /><input name="name" type="text" /><br /></label>
+		  <label>Password<br /><input name="email" type="password"  /><br /></label>
+		  <label><input type="checkbox" />Remember me</label>
+		  <input name="submit" type="submit" value="Sign in" >
+		  <input name="submit" type="submit" value="Sign in" class="button-primary">
+	    </fieldset>
+		<fieldset>
+		  <legend>Create your personal account</legend>
+		  <label>Username<br /><input name="username" type="text" placeholder="Pick a username"/></label>
+		  <label>Email Address<br /><input name="email" type="text" placeholder="Your email"/></label>
+		  <label>Password<br /><input name="password" type="password" placeholder="Create a password"/></label>
+		  <label>Confirm your password<br /><input name="confirm-pwd" type="password" placeholder="Confirm password"/></label>
+		  <label><input type="checkbox" />I've read the terms and conditions</label>
+		  <input name="submit" type="submit" value="Create an account" class="button">
+		  <input name="submit" type="submit" value="Create an account" class="button-primary">
+		</fieldset>
+		<fieldset>
+		  <legend>Contact us</legend>
+		  <label>Organization name<br /><input name="org-name" type="text"/></label>
+		  <label>Your full name<br /><input name="full-name" type="text"/></label>
+		  <label>Your work email<br /><input name="email" type="email"/></label>
+		  <label>Phone<br /><input name="phone" type="tel"/></label>
+		  <label>What can we help you with<br /><textarea name="message"></textarea></label>
+		  <input name="submit" type="submit" value="Send request" class="button">
+		  <input name="submit" type="submit" value="Send request" class="button-primary">
+		</fieldset>
+	    <fieldset class="interestsGroup">
+		  <h6>Tell us about your interests</h6>
+		  <label><input type="checkbox" name="surfing">Surfing the web</label>
+		  <label><input type="checkbox" name="watching">Watching TV</label>
+		  <label><input type="checkbox" name="exploring">Exploring the nature</label>
+	    </fieldset>
+	    <fieldset>
+		  <label>Message<br /><textarea name="message"></textarea><br /></label>
+	    </fieldset>
+	    <input name="submit" type="submit" value="Send message" class="button">
+		<input name="submit" type="submit" value="Send message" class="button-primary">
+	  </form>
+    </div>
+  </div>
+
+	<!-- Script -->
+    <script src="js/vendor/jquery-2.1.0.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
