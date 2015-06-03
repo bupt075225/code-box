@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>语音模板</title>
+        <meta name="generator" content="Responsive Web Css (www.responsivewebcss.com)" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- CSS -->
+        <link rel="stylesheet" href="css/normalize.css">
+	    <link rel="stylesheet" href="css/skeleton.css">
+        <link rel="stylesheet" href="css/index.css">
+		
+		<!-- JS -->
+		<script type="text/javascript" src="js/vendor/jquery-1.11.3.min.js"></script>
+    </head>
+    <body>
+        <div id='root'>
+            <div class='box' id='header'>header</div>
+            <div class='box' id='content'>
+                <div class='box' id='map'>
+					<img src="images/map.png" alt="停车场地图"/>
+				</div>
+                <div class='box' id='form'>
+				    <form>
+						<p>请点击下表中的按钮和下拉列表（可重复多次点击和选择）产生行车路线描述</p>
+						<fieldset>
+							<legend>进入停车场后的行车路线指示:</legend>
+							<div>
+								<input type="button" id="straightButton" name="straight" value="直行"/>
+								<div class="straightOption"><label><input type="radio" name="end" value="end"/>到头</label></div>
+								<div class="straightOption">
+									<label>
+										<input type="radio" name="end" value="column"/>到第
+										<select id="columnNumber" name="columnNumber">
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>								
+										</select>
+										根立柱
+									</label>
+								</div>
+								
+								<div class="straightOption">
+									<label>
+										<input type="radio" name="end" value="cross"/>
+										到第
+										<select id="crossNumber" name="crossNumber">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>								
+										</select>
+										个路口
+									</label>
+								</div>
+							</div>
+
+							<div><input type="button" id="turnLeftButton" name="turn-left" value="左转"/></div>
+							<div><input type="button" id="turnRightButton" name="turn-right" value="右转"/></div>
+							<div>
+								<input type="button" id="arrivalButton" name="arrival" value="停入"/>
+								<div class="direction">
+									<select id="parkingDir" name="direction">
+										<option value="left">左侧</option>
+										<option value="right">右侧</option>
+										<option value="front">前方</option>								
+									</select>
+									<input type="text" id="parkingNumber" name="parkingNumber" value=""/>
+									号车位。
+								</div>
+							</div>						
+							
+						</fieldset>
+						<input type="button" class="okButton" name="submit" value="线路描述完成"/>
+						<input type="button" class="resetButton" name="submit" value="重置"/>
+					</form>
+					<div>
+						<h5>行车路线描述：</h5>
+						<p id="routeDescription">进入停车场。<br/></p>
+					</div>
+				</div>
+            </div>
+            <div class='box' id='footer'>footer</div>
+        </div>
+	
+	<script type="text/javascript">
+	    //自动生成直行描述，显示详细信息
+		$("#straightButton").click(function(){
+			$("#routeDescription").append("直行");
+			//$(".straightOption").css("display","block");
+		});
+		
+		//自动生成左转描述，隐直行详细信息
+		$("#turnLeftButton").click(function(){
+			var selectedRadio;
+			var columnNumber;
+			var crossNumber;
+			
+			//获取选中的radio值和下拉列表值
+			selectedRadio=$("input:radio:checked").val();
+			columnNumber=$("select#columnNumber").find("option:selected").val();
+			crossNumber=$("select#crossNumber").find("option:selected").val();
+			if(selectedRadio=="end")
+			{
+				$("#routeDescription").append("到头，");
+			}
+			if(selectedRadio=="column")
+			{
+				$("#routeDescription").append("到第" + columnNumber + "根立柱，");
+			}
+			if(selectedRadio=="cross")
+			{
+				$("#routeDescription").append("到第" + crossNumber + "个路口，");
+			}
+			
+			$("#routeDescription").append("左转。");
+			$("#routeDescription").append("<br/>")
+			$(".straightOption").css("display","none");
+		});
+		
+		//自动生成右转描述，隐藏直行详细信息
+		$("#turnRightButton").click(function(){
+			var selectedRadio;
+			var columnNumber;
+			var crossNumber;
+			
+			//获取选中的radio值和下拉列表值
+			selectedRadio=$("input:radio:checked").val();
+			columnNumber=$("select#columnNumber").find("option:selected").val();
+			crossNumber=$("select#crossNumber").find("option:selected").val();
+			if(selectedRadio=="end")
+			{
+				$("#routeDescription").append("到头，")
+			}
+			if(selectedRadio=="column")
+			{
+				$("#routeDescription").append("到第" + columnNumber + "根立柱，");
+			}
+			if(selectedRadio=="cross")
+			{
+				$("#routeDescription").append("到第" + crossNumber + "个路口，");
+			}
+			
+			$("#routeDescription").append("右转。");
+			$("#routeDescription").append("<br/>")
+			$(".straightOption").css("display","none");
+		});
+		
+		//自动生成描述，显示停车位详细信息
+		$("#arrivalButton").click(function(){
+			var selectedRadio;
+			var columnNumber;
+			var crossNumber;			
+				
+			$(".direction").css("display","inline");
+			//获取选中的radio值和下拉列表值
+			selectedRadio=$("input:radio:checked").val();
+			columnNumber=$("select#columnNumber").find("option:selected").val();
+			crossNumber=$("select#crossNumber").find("option:selected").val();
+			if(selectedRadio=="end")
+			{
+				$("#routeDescription").append("到头，")
+			}
+			if(selectedRadio=="column")
+			{
+				$("#routeDescription").append("到第" + columnNumber + "根立柱，");
+			}
+			if(selectedRadio=="cross")
+			{
+				$("#routeDescription").append("到第" + crossNumber + "个路口，");
+			}
+			//隐藏直行详细信息
+			$(".straightOption").css("display","none");	
+			$("#routeDescription").append("停入");
+		});				
+		
+		//自动生成停车位信息
+		$(".okButton").click(function(){
+			var direction;
+			var parkingNum;
+			
+			//获取停车位方位信息
+			direction=$("select#parkingDir").find("option:selected").text();
+			//获取车位号
+			parkingNum=$("#parkingNumber").val();
+			$("#routeDescription").append(direction + parkingNum + "号车位。");
+			$(".direction").css("display","none");
+		});
+		
+		//重新刷新页面
+		$(".resetButton").click(function(){
+			location.reload();
+		});
+	</script>
+    </body>
+</html>
