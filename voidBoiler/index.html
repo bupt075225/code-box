@@ -33,9 +33,16 @@
 									<label>
 										<input type="radio" name="end" value="column"/>到第
 										<select id="columnNumber" name="columnNumber">
-											<option value="3">3</option>
-											<option value="4">4</option>
-											<option value="5">5</option>								
+											<option value="3">2</option>
+											<option value="5">3</option>
+											<option value="7">4</option>
+											<option value="9">5</option>
+											<option value="9">6</option>
+											<option value="9">7</option>
+											<option value="9">8</option>
+											<option value="9">9</option>
+											<option value="9">10</option>
+											<option value="9">11</option>
 										</select>
 										根立柱
 									</label>
@@ -56,18 +63,24 @@
 								</div>
 							</div>
 
-							<div><input type="button" id="turnLeftButton" name="turn-left" value="左转"/></div>
-							<div><input type="button" id="turnRightButton" name="turn-right" value="右转"/></div>
+							<div>
+								<input type="button" id="turnLeftButton" name="turnLeft" value="左转"/>
+							</div>
+							<div>
+								<input type="button" id="turnRightButton" name="turnRight" value="右转"/>
+							</div>
 							<div>
 								<input type="button" id="arrivalButton" name="arrival" value="停入"/>
 								<div class="direction">
 									<select id="parkingDir" name="direction">
-										<option value="left">左侧</option>
-										<option value="right">右侧</option>
-										<option value="front">前方</option>								
+										<option value="left">左前方</option>
+										<option value="right">右前方</option>
+										<option value="front">前方</option>	
+										<option value="front">左侧</option>
+										<option value="front">右侧</option>
 									</select>
+									车位，吊牌信息为
 									<input type="text" id="parkingNumber" name="parkingNumber" value=""/>
-									号车位。
 								</div>
 							</div>						
 							
@@ -115,7 +128,7 @@
 			}
 			
 			$("#routeDescription").append("左转。");
-			$("#routeDescription").append("<br/>")
+			$("#routeDescription").append("<br/>");
 			$(".straightOption").css("display","none");
 		});
 		
@@ -131,7 +144,7 @@
 			crossNumber=$("select#crossNumber").find("option:selected").val();
 			if(selectedRadio=="end")
 			{
-				$("#routeDescription").append("到头，")
+				$("#routeDescription").append("到头，");
 			}
 			if(selectedRadio=="column")
 			{
@@ -143,7 +156,7 @@
 			}
 			
 			$("#routeDescription").append("右转。");
-			$("#routeDescription").append("<br/>")
+			$("#routeDescription").append("<br/>");
 			$(".straightOption").css("display","none");
 		});
 		
@@ -160,7 +173,7 @@
 			crossNumber=$("select#crossNumber").find("option:selected").val();
 			if(selectedRadio=="end")
 			{
-				$("#routeDescription").append("到头，")
+				$("#routeDescription").append("到头，");
 			}
 			if(selectedRadio=="column")
 			{
@@ -184,7 +197,7 @@
 			direction=$("select#parkingDir").find("option:selected").text();
 			//获取车位号
 			parkingNum=$("#parkingNumber").val();
-			$("#routeDescription").append(direction + parkingNum + "号车位。");
+			$("#routeDescription").append(direction + "车位,吊牌信息为" + parkingNum);
 			$(".direction").css("display","none");
 		});
 		
