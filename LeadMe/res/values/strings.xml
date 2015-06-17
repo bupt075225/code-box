@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LeadMe</string>
+    <string name="action_settings">Settings</string>
+    <string name="routeDescription">描述行车路线</string>
+    <string name="starTts">文字转语音</string>
+    <string name="synthesizeVoice">语音合成</string>
+    <string name="sensorControl">感应器控制语音</string>
+    <string name="inputHint">请输入路线描述</string>
+    <string name="startSynthesize">开始合成</string>
+    <string name="touchControl">手势控制语音</string>
+    <string name="title_activity_sensor">感应器控制语音</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_voice">语音合成</string>
+    <string name="title_activity_descripting">路线描述</string>
+    <string name="title_activity_touch_ctrl">手势控制语音</string>
+
+</resources>

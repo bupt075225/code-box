@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.leadme.MainActivity"
+    android:orientation="vertical" >
+    
+    <Button
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/routeDescription"
+        android:onClick="descriptRoute"/>
+    
+    <Button
+        android:id="@+id/voice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/synthesizeVoice"
+        android:onClick="synthesizeVoice" />
+    
+	<Button
+	    android:id="@+id/sensorCtrl"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/sensorControl"
+	    android:onClick="sensorControlVoice"/>
+	
+	<Button
+	    android:id="@+id/touchCtrl"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/touchControl"
+	    android:onClick="touchControlVoice"/>
+</LinearLayout>
