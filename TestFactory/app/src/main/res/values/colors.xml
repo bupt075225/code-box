@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#3D3D3D</color>
+    <color name="primary_dark">#313131</color>
+    <color name="myWindowsBackground">#F9F9F9</color>
+    <color name="myTextPrimaryColor">#FFF</color>
+    <color name="myDrawerBackground">#111</color>
+</resources>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Test Factory</string>
+    <string name="main_activity_name">邻里</string>
+
+    <string name="action_settings">Settings</string>
+    <string-array name="nav_item_array">
+        <item>个人资料</item>
+        <item>付款</item>
+        <item>历史记录</item>
+        <item>优惠</item>
+        <item>帮助</item>
+        <item>关于</item>
+    </string-array>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+</resources>
