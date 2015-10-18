@@ -3,14 +3,14 @@
     <string name="main_activity_name">邻里</string>
 
     <string name="action_settings">Settings</string>
-    <string-array name="nav_item_array">
-        <item>个人资料</item>
-        <item>付款</item>
-        <item>历史记录</item>
-        <item>优惠</item>
-        <item>帮助</item>
-        <item>关于</item>
-    </string-array>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
+
+    <string name="avatar">Avatar</string>
+    <string name="navigation_profile">个人资料</string>
+    <string name="navigation_pay">付款</string>
+    <string name="navigation_history">历史记录</string>
+    <string name="navigation_off">优惠</string>
+    <string name="navigation_help">帮助</string>
+    <string name="navigation_about">关于</string>
 </resources>

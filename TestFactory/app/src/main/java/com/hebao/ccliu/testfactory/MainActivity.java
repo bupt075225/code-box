@@ -2,6 +2,7 @@ package com.hebao.ccliu.testfactory;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,18 +10,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements
+        NavigationView.OnNavigationItemSelectedListener {
 
-    private String[] mNavItems;
     private DrawerLayout mDrawerLayout;
-    private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
     private TextView toolbarTitle;
+    private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,14 +32,8 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         toolbarTitle = (TextView)mToolbar.findViewById(R.id.toolbar_title);
 
-        mNavItems = getResources().getStringArray(R.array.nav_item_array);
         mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
-        mDrawerList = (ListView)findViewById(R.id.left_drawer);
-
-        //设置adapter,list view的内容由adapter产生
-        mDrawerList.setAdapter(new ArrayAdapter<String>(this, R.layout.drawer_list_item,
-                mNavItems));
-        mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+        navigationView = (NavigationView)findViewById(R.id.navigation_view);
 
         // App bar上的图标按钮与导航抽屉的滑动交互通过ActionBarToggle关联起来
         mDrawerToggle = new ActionBarDrawerToggle(
@@ -60,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         mDrawerLayout.setDrawerListener(mDrawerToggle);
+        navigationView.setNavigationItemSelectedListener(this);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
     }
@@ -90,23 +83,6 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    // 监听点击左滑导航抽屉中的导航项
-    private class DrawerItemClickListener implements ListView.OnItemClickListener {
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            selectItem(position);
-        }
-    }
-
-    private void selectItem(int position) {
-        //创建新的fragment,通过替换fragment来更新主界面内容
-
-        //导航抽屉中选中的导航项高亮
-        mDrawerList.setItemChecked(position, true);
-        //关闭抽屉
-        mDrawerLayout.closeDrawer(mDrawerList);
-    }
-
     //使用了ActionBarDrawerToggle后要覆盖以下两个方法
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
@@ -130,5 +106,13 @@ public class MainActivity extends AppCompatActivity {
         if(toolbarTitle != null) {
             toolbarTitle.setText(title);
         }
+    }
+
+    // 监听点击左滑导航抽屉中的导航项
+    @Override
+    public boolean onNavigationItemSelected(MenuItem menuItem) {
+        int itemId = menuItem.getItemId();
+
+        return true;
     }
 }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_profile"
+            android:icon="@mipmap/ic_github_person_black_24dp"
+            android:title="@string/navigation_profile"/>
+        <item
+            android:id="@+id/navigation_pay"
+            android:icon="@mipmap/ic_github_person_black_24dp"
+            android:title="@string/navigation_pay"/>
+        <item
+            android:id="@+id/navigation_history"
+            android:icon="@mipmap/ic_github_person_black_24dp"
+            android:title="@string/navigation_history"/>
+        <item
+            android:id="@+id/navigation_off"
+            android:icon="@mipmap/ic_github_person_black_24dp"
+            android:title="@string/navigation_off"/>
+        <item
+            android:id="@+id/navigation_help"
+            android:icon="@mipmap/ic_github_person_black_24dp"
+            android:title="@string/navigation_help"/>
+        <item
+            android:id="@+id/navigation_about"
+            android:icon="@mipmap/ic_github_person_black_24dp"
+            android:title="@string/navigation_about"/>
+    </group>
+</menu>
